@@ -1,0 +1,35 @@
+<div id="<%= dom_id producto %>">
+  <p>
+    <strong>Codigo:</strong>
+    <%= producto.codigo %>
+  </p>
+
+  <p>
+    <strong>Nombre:</strong>
+    <%= producto.nombre %>
+  </p>
+
+  <p>
+    <strong>Descripcion:</strong>
+    <%= producto.descripcion %>
+  </p>
+
+  <p>
+    <strong>Precio:</strong>
+    <%= producto.precio %>
+  </p>
+
+  <p>
+    <strong>¿Tiene imagen?</strong>
+    <%= producto.image.attached? %>
+  </p>
+
+  <p>
+    <strong>Imagen subida:</strong>
+    <% if producto.image.attached? %>
+      <%= image_tag producto.image, :style => "width: 200px; border: 1px solid green;" %>
+      <%= image_tag producto.image, :class => "prod bordemio" %>
+    <% end %>
+  </p>
+
+</div>
