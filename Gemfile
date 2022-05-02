@@ -49,6 +49,7 @@ gem "bootsnap", require: false
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
+
   gem "sqlite3", "~> 1.4"
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -73,6 +74,7 @@ group :test do
 end
 
 group :production do
+  gem 'aws-sdk', '~> 2.3'
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "pg"
 end
