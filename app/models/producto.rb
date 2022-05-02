@@ -1,3 +1,3 @@
 class Producto < ApplicationRecord
-    has_one_attached :image
+    remove_attachment has_one_attached :image
 end
